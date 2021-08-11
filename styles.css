@@ -167,6 +167,8 @@ body {
     #searchBar {
         top: 35%;
         border: none;
+        width: 40%;
+        left: 30%;
     }
     .clock-cont {
         top: 45%;
