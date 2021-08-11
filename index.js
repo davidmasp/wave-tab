@@ -9,33 +9,43 @@ function preZero(number) {
     }
 }
 
-var now = new Date();
-//console.log(now.toLocaleTimeString());
-var id = "clock";
-var id2 = "clock2";
-var hours = preZero(now.getHours());
-var minutes = preZero(now.getMinutes());
+function getWeekDay(now){
+    var weekday = new Array(7);
+    weekday[0] = "Sun.";
+    weekday[1] = "Mon.";
+    weekday[2] = "Tue.";
+    weekday[3] = "Wed.";
+    weekday[4] = "Thu.";
+    weekday[5] = "Fri.";
+    weekday[6] = "Sat.";
+    
+    const weekDay = weekday[now.getDay()];
+    return weekDay;
+}
 
+function setClocks(){
+    var now = new Date();
+    //console.log(now.toLocaleTimeString());
+    var id = "clock";
+    var id2 = "clock2";
+    var hours = preZero(now.getHours());
+    var minutes = preZero(now.getMinutes());
 
-document.getElementById(id).innerHTML = `${hours}:${minutes}`;
+    document.getElementById("test").innerHTML = now.toString();
 
-var weekday = new Array(7);
-weekday[0] = "Sun.";
-weekday[1] = "Mon.";
-weekday[2] = "Tue.";
-weekday[3] = "Wed.";
-weekday[4] = "Thu.";
-weekday[5] = "Fri.";
-weekday[6] = "Sat.";
+    document.getElementById(id).innerHTML = `${hours}:${minutes}`;
+    const weekDay = getWeekDay(now)
 
-var weekDay = weekday[now.getDay()];
+    var yearInst = now.getFullYear()
+    var monthInst = preZero(now.getMonth() + 1);
+    var dayInst = preZero(now.getDate());
 
-var yearInst = now.getFullYear()
-var monthInst = preZero(now.getMonth() + 1);
-var dayInst = preZero(now.getDate());
+    var stringDate = `${weekDay}, ${yearInst}-${monthInst}-${dayInst}`;
+    document.getElementById(id2).innerHTML = stringDate;
+    setInterval(setClocks(), 300);
+}
 
-var stringDate = `${weekDay}, ${yearInst}-${monthInst}-${dayInst}`;
-document.getElementById(id2).innerHTML = stringDate;
+setClocks();
 
 
 // query to search
