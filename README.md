@@ -1,24 +1,25 @@
 # wave-tab
 
 Wave tab is a mobile-first and computer compatible start
-page for your favourite browser. It contains a
+page for your favorite browser. It contains a
 randomly generated wave in the top of the page making your
-browser expirience a pleasant and relaxing and unique trip.
+browser experience a pleasant and relaxing and unique trip.
 
 This page is hosted via github pages
 [here](http://david.masponte.com/wave-tab).
 You are also
 free to fork or copy the code and include and personalize the
-expirience.
+experience.
 
 ## Preview
 
 A mobile first starting page:
 
+![example gif](screenshots/mobile_example.png)
 
-A capable desktop expirience:
+A relaxing desktop experience:
 
-
+![example gif](screenshots/desk_example.png)
 
 ## Usage
 
@@ -38,8 +39,16 @@ Currently, only 2 search commands are implemented. To run them use the keyword
 * `/g` Searchs in google search (also works as default)
 * `/d` Searchs the input string in [DuckDuckGo](https://duckduckgo.com/)
 
-![example gif](screenshots/ddg_example.gif)
+![example gif](screenshots/ddg_example.png)
 
+### Extra
+
+If you want to save the web site as an App in an iPhone device (webApp)
+you can use the funcionality (`save to Home Screen`) which is built into
+the safari share button.
+
+The page will be saved in the home screen with a custom logo and every time
+you press it will re-direct you to that same page.
 ## Tools used
 
 To implement this start page I used basically HTML/CSS and Javascript.
