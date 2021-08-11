@@ -15,11 +15,11 @@ experience.
 
 A mobile first starting page:
 
-![example gif](screenshots/mobile_example.png)
+<img width="200" alt="portfolio_view" src="screenshots/mobile_example.png">
 
 A relaxing desktop experience:
 
-![example gif](screenshots/desk_example.png)
+<img width="500" alt="portfolio_view" src="screenshots/desk_example.png">
 
 ## Usage
 
@@ -39,7 +39,7 @@ Currently, only 2 search commands are implemented. To run them use the keyword
 * `/g` Searchs in google search (also works as default)
 * `/d` Searchs the input string in [DuckDuckGo](https://duckduckgo.com/)
 
-![example gif](screenshots/ddg_example.png)
+<img  width="500" alt="portfolio_view" src="screenshots/ddg_example.png">
 
 ### Extra
 
@@ -49,6 +49,10 @@ the safari share button.
 
 The page will be saved in the home screen with a custom logo and every time
 you press it will re-direct you to that same page.
+
+<img width="200" alt="portfolio_view" src="screenshots/saveapp.jpg">
+<img width="200" alt="portfolio_view" src="screenshots/homescreen.jpg">
+
 ## Tools used
 
 To implement this start page I used basically HTML/CSS and Javascript.
