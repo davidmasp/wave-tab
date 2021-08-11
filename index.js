@@ -31,8 +31,6 @@ function setClocks(){
     var hours = preZero(now.getHours());
     var minutes = preZero(now.getMinutes());
 
-    document.getElementById("test").innerHTML = now.toString();
-
     document.getElementById(id).innerHTML = `${hours}:${minutes}`;
     const weekDay = getWeekDay(now)
 
@@ -42,11 +40,11 @@ function setClocks(){
 
     var stringDate = `${weekDay}, ${yearInst}-${monthInst}-${dayInst}`;
     document.getElementById(id2).innerHTML = stringDate;
-    setInterval(setClocks(), 300);
+    setInterval(setClocks, 10000); // this should be 10 seconds
 }
 
+// from https://stackoverflow.com/a/5092038 
 setClocks();
-
 
 // query to search
 var inputVal = document.getElementById("searchBar");
@@ -67,7 +65,9 @@ function redirectSearch(e) {
         redirectGoogleSearch(textValue);
     } else if (query.startsWith("/d")){
         redirectDDGSearch(textValue);
-    } else{
+    } else if (query.startsWith("/r")) {
+        redirectReddit(textValue);
+    } else {
         redirectGoogleSearch(query);
     }
 }
@@ -79,6 +79,11 @@ function redirectGoogleSearch(query) {
 
 function redirectDDGSearch(query) {
     baseUrl = `https://duckduckgo.com/?q=${query}&kp=-1&kl=us-en`
+    window.location.replace(baseUrl);
+}
+
+function redirectReddit(query) {
+    baseUrl = `https://www.reddit.com/search?q=${query}`
     window.location.replace(baseUrl);
 }
 
